@@ -7,8 +7,6 @@ type AdvisorCardProps = {
 };
 
 export default function AdvisorCard({ advisor }: AdvisorCardProps) {
-    const fullName = `${advisor.name} ${advisor.surname}`;
-
     return (
         <Box
             component="article"
@@ -28,12 +26,12 @@ export default function AdvisorCard({ advisor }: AdvisorCardProps) {
         >
             <Stack direction="row" spacing={2}>
                 <Avatar
-                    alt={fullName}
-                    src={advisor.imageSrc}
+                    alt={advisor.name}
+                    src={advisor.profilePictureUrl}
                     sx={{ width: 62, height: 62 }}
                 />
                 <Typography variant="h6" sx={{ color: "primary.main" }}>
-                    {fullName}
+                    {advisor.name}
                 </Typography>
             </Stack>
 

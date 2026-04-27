@@ -8,19 +8,17 @@ type AdvisorProps = {
 };
 
 export default function Advisor({advisor}: AdvisorProps) {
-    const fullName = `${advisor.name} ${advisor.surname}`;
-
     return (
         <article className={styles.article}>
             <div className={styles.profile}>
                 <Image
                     className={styles.avatar}
-                    src={advisor.imageSrc}
-                    alt={fullName}
+                    src={advisor.profilePictureUrl}
+                    alt={advisor.name}
                     width={62}
                     height={62}
                 />
-                <h2 className={styles.name}>{fullName}</h2>
+                <h2 className={styles.name}>{advisor.name}</h2>
             </div>
 
             <AdvisorActions advisor={advisor}/>

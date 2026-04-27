@@ -11,8 +11,8 @@ type AdvisorActionsProps = {
 };
 
 export default function MuiAdvisorActions({ advisor }: AdvisorActionsProps) {
-    const callLabel = advisor.callAvailability ? dictionary.label.callNow : dictionary.label.callLater;
-    const chatLabel = advisor.chatAvailability ? dictionary.label.chatNow : dictionary.label.charLater;
+    const callLabel = advisor["call-availability"] ? dictionary.label.callNow : dictionary.label.callLater;
+    const chatLabel = advisor["chat-availability"] ? dictionary.label.chatNow : dictionary.label.charLater;
 
     const callNow = () => {
         alert(`Calling ${advisor.name}`);
@@ -28,7 +28,7 @@ export default function MuiAdvisorActions({ advisor }: AdvisorActionsProps) {
             <Button
                 variant="contained"
                 disableElevation
-                disabled={!advisor.callAvailability}
+                disabled={!advisor["call-availability"]}
                 onClick={callNow}
                 startIcon={<LocalPhoneOutlinedIcon sx={{ fontSize: 12 }} />}
                 sx={{
@@ -36,9 +36,9 @@ export default function MuiAdvisorActions({ advisor }: AdvisorActionsProps) {
                     height: 24,
                     borderRadius: 0.75,
                     justifyContent: "center",
-                    bgcolor: advisor.callAvailability ? "primary.main" : "grey.300",
-                    color: advisor.callAvailability ? "primary.contrastText" : "#ffffff",
-                    "&:hover": advisor.callAvailability ? { bgcolor: "#18877f" } : undefined,
+                    bgcolor: advisor["call-availability"] ? "primary.main" : "grey.300",
+                    color: advisor["call-availability"] ? "primary.contrastText" : "#ffffff",
+                    "&:hover": advisor["call-availability"] ? { bgcolor: "#18877f" } : undefined,
                     "&.Mui-disabled": {
                         bgcolor: "grey.300",
                         color: "#ffffff",
@@ -50,7 +50,7 @@ export default function MuiAdvisorActions({ advisor }: AdvisorActionsProps) {
             <Button
                 variant="contained"
                 disableElevation
-                disabled={!advisor.chatAvailability}
+                disabled={!advisor["chat-availability"]}
                 onClick={chatNow}
                 startIcon={<ChatBubbleOutlineRoundedIcon sx={{ fontSize: 12 }} />}
                 sx={{
@@ -58,9 +58,9 @@ export default function MuiAdvisorActions({ advisor }: AdvisorActionsProps) {
                     height: 24,
                     borderRadius: 0.75,
                     justifyContent: "center",
-                    bgcolor: advisor.chatAvailability ? "primary.main" : "grey.300",
-                    color: advisor.chatAvailability ? "primary.contrastText" : "#ffffff",
-                    "&:hover": advisor.chatAvailability ? { bgcolor: "#18877f" } : undefined,
+                    bgcolor: advisor["chat-availability"] ? "primary.main" : "grey.300",
+                    color: advisor["chat-availability"] ? "primary.contrastText" : "#ffffff",
+                    "&:hover": advisor["chat-availability"] ? { bgcolor: "#18877f" } : undefined,
                     "&.Mui-disabled": {
                         bgcolor: "grey.300",
                         color: "#ffffff",

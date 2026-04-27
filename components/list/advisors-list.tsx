@@ -11,7 +11,7 @@ export default function AdvisorsList({ advisors }: AdvisorsListProps) {
         <section className={styles.container}>
             <div className={styles.list}>
                 {advisors.map((advisor) => (
-                    <Advisor key={advisor.id} advisor={advisor} />
+                    <Advisor key={`${advisor.id}-${advisor.name}`} advisor={advisor} />
                 ))}
             </div>
         </section>

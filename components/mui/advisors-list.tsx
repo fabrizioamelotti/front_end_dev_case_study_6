@@ -30,7 +30,7 @@ export default function MuiAdvisorsList({ advisors }: AdvisorsListProps) {
                 }}
             >
                 {advisors.map((advisor) => (
-                    <AdvisorCard key={advisor.id} advisor={advisor} />
+                    <AdvisorCard key={`${advisor.id}-${advisor.name}`} advisor={advisor} />
                 ))}
             </Paper>
         </Box>

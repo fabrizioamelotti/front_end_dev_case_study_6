@@ -12,8 +12,8 @@ type AdvisorActionsProps = {
 };
 
 export default function AdvisorActions({advisor}: AdvisorActionsProps) {
-    const callLabel = advisor.callAvailability ? dictionary.label.callNow : dictionary.label.callLater;
-    const chatLabel = advisor.chatAvailability ? dictionary.label.chatNow : dictionary.label.charLater;
+    const callLabel = advisor["call-availability"] ? dictionary.label.callNow : dictionary.label.callLater;
+    const chatLabel = advisor["chat-availability"] ? dictionary.label.chatNow : dictionary.label.charLater;
 
     const callNow = () => {
         alert(`Calling ${advisor.name}`)
@@ -28,18 +28,18 @@ export default function AdvisorActions({advisor}: AdvisorActionsProps) {
         <div className={styles.actions}>
             <div className={styles.price}>{advisor.price}</div>
             <button
-                className={`${styles.button} ${advisor.callAvailability ? styles.buttonAvailable : styles.buttonUnavailable}`}
+                className={`${styles.button} ${advisor["call-availability"] ? styles.buttonAvailable : styles.buttonUnavailable}`}
                 type={"button"}
-                disabled={!advisor.callAvailability}
+                disabled={!advisor["call-availability"]}
                 onClick={callNow}
             >
                 <Image src={callIcon} alt={callLabel} aria-hidden="true" className={styles.buttonIcon} />
                 {callLabel}
             </button>
             <button
-                className={`${styles.button} ${advisor.chatAvailability ? styles.buttonAvailable : styles.buttonUnavailable}`}
+                className={`${styles.button} ${advisor["chat-availability"] ? styles.buttonAvailable : styles.buttonUnavailable}`}
                 type={"button"}
-                disabled={!advisor.chatAvailability}
+                disabled={!advisor["chat-availability"]}
                 onClick={chatNow}
             >
                 <Image src={chatIcon} alt={chatLabel} aria-hidden="true" className={styles.buttonIcon} />

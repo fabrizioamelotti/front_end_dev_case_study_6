@@ -1,16 +1,15 @@
 export type AdvisorIdType = {
-    id: string,
+    id: number,
 }
 
 export type AdvisorAvailabilityType = {
-    callAvailability: boolean,
-    chatAvailability: boolean,
+    "call-availability": number,
+    "chat-availability": number,
 };
 
 export type AdvisorResponseType = AdvisorIdType & AdvisorAvailabilityType & {
     name: string,
-    surname: string,
-    imageSrc: string,
+    profilePictureUrl: string,
     price: string,
 }
 

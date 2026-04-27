@@ -85,16 +85,36 @@ To get the advisor list, I created the: `advisors.service.ts`.
 #### ISSUE
 I didn't have the chance to correctly execute the API:
 https://demo2255213.mockable.io/listings
+
 I don't know why this is not working for me.
 I tried with a VPN in a different country without success.
 - Argentina
 - USA
 - Italy
 
-So, that's why I created mocked data and random data to check 
-the availability of each advisor.
+So, that's why I created a list of advisors from the data that [Yuliia Pysmenna](https://www.linkedin.com/in/yuliia-pysmenna-303036152/) provided.
 
-### 7. Conclusions
+For the other endpoint:
+https://demo2255213.mockable.io/advisor-availability?advisorId=100
+I created a function to get the availability of each advisor with random data.
+
+### 7. Next configurations
+Changed the `next.config.js` file to allow the image URLs.
+```json
+{
+  "images": {
+    "remotePatterns": [
+      {
+        "protocol": "https",
+        "hostname": "si.keen.com",
+        "pathname": "/memberphotos/**"
+      }
+    ]
+  }
+}
+```
+
+### 8. Conclusions
 I think this project is a good example of how to build a Next.js project 
 with custom CSS, Tailwind CSS and MUI CSS.
 
