@@ -98,6 +98,10 @@ For the other endpoint:
 https://demo2255213.mockable.io/advisor-availability?advisorId=100
 I created a function to get the availability of each advisor with random data.
 
+#### advisors.service.ts
+In this file, the code to get the advisor list is commented.
+To check if the API is working, please, uncomment the code and comment the mock data returned.
+
 ### 7. Next configurations
 Changed the `next.config.js` file to allow the image URLs.
 ```json

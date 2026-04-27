@@ -3,8 +3,9 @@ import {AdvisorAvailabilityResponse, AdvisorResponseType} from "./advisors.type"
 export class AdvisorsService {
     public static async findAdvisors(): Promise<AdvisorResponseType[]> {
         // ENDPOINT DOESN'T WORK --> So I WILL MOCK THE RESPONSE
-        //
         // [GET] https://demo2255213.mockable.io/listings
+
+        // Uncomment the following lines to use the real endpoint
         // const response = await fetch("https://demo2255213.mockable.io/listings", {
         //     method: "GET",
         //     cache: "no-store",
@@ -16,7 +17,7 @@ export class AdvisorsService {
         //
         // const advisors = (await response.json()) as AdvisorResponseType[];
         //
-        // return advisors;
+        // return advisors.data;
 
         /**
          * IMPORTANT !!!
@@ -61,8 +62,9 @@ export class AdvisorsService {
 
     public static async checkAdvisorAvailabilityById(advisorId: number): Promise<AdvisorAvailabilityResponse> {
         // ENDPOINT DOESN'T WORK --> So I WILL MOCK THE RESPONSE
-        //
         // [GET] https://demo2255213.mockable.io/advisor-availability?advisorId=100
+
+        // Uncomment the following lines to use the real endpoint
         // const response = await fetch(`https://demo2255213.mockable.io/advisor-availability?advisorId=${advisorId}`, {
         //     method: "GET",
         //     cache: "no-store",
