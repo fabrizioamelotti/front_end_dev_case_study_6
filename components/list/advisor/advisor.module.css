@@ -1,0 +1,29 @@
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #edf3f5;
+}
+
+.article:last-child {
+    border-bottom: none;
+}
+
+.profile {
+    display: flex;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 62px;
+    height: 62px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+.name {
+    margin: 0;
+    color: var(--main-background-color);
+}

@@ -1,0 +1,44 @@
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    flex-shrink: 0;
+}
+
+.price {
+    color: var(--black);
+    font-weight: bold;
+}
+
+.button {
+    min-width: 6rem;
+    height: 1.5rem;
+    border-radius: var(--border-radius);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
+.buttonIcon {
+    width: 12px;
+    height: 12px;
+}
+
+.buttonAvailable {
+    background: var(--main-background-color);
+    color: var(--main-color);
+}
+
+.buttonAvailable:hover {
+    background: color-mix(in srgb, var(--main-background-color), black 20%);
+    cursor: pointer;
+}
+
+.buttonUnavailable {
+    background: var(--disabled-background-color);
+    color: var(--disabled-color);
+    cursor: not-allowed;
+}
